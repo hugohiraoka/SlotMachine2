@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slotmachinetwo.SlotMachineTwoController">
+  <children>
+    <Rectangle fx:id="rectangle01" arcHeight="5.0" arcWidth="8.0" height="620.0" strokeType="INSIDE" width="660.0">
+      <stroke>
+        <RadialGradient centerX="0.5" centerY="0.719047619047619" cycleMethod="REFLECT" focusAngle="-148.76" radius="0.5">
+          <stops>
+            <Stop color="#7c2c2c" />
+            <Stop color="#170606" offset="1.0" />
+          </stops>
+        </RadialGradient>
+      </stroke>
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#510008e8" />
+                  <Stop color="#510008e8" offset="0.47126436781609193" />
+                  <Stop color="#510008e8" offset="0.6283524904214556" />
+                  <Stop color="#ff00004d" offset="0.8773946360153253" />
+                  <Stop color="#ebc51ec7" offset="0.9999999999999996" />
+                  <Stop color="#0000004d" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+    </Rectangle>
+    <HBox fx:id="hboxMain" layoutX="7.0" layoutY="77.0" prefHeight="217.0" prefWidth="648.0">
+      <children>
+        <ImageView fx:id="imageViewLeft" fitHeight="208.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+          <HBox.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+          </HBox.margin>
+        </ImageView>
+        <ImageView fx:id="imageViewCenterLeft" fitHeight="208.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+          <HBox.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+          </HBox.margin>
+        </ImageView>
+        <ImageView fx:id="imageViewCenterRight" fitHeight="208.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" x="0.0" y="0.0">
+          <HBox.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+          </HBox.margin>
+        </ImageView>
+            <ImageView fx:id="imageViewRight" fitHeight="208.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </HBox.margin></ImageView>
+      </children>
+    </HBox>
+    <Label fx:id="labelTotalLosses" layoutX="536.0" layoutY="432.0" text="Net Losses" textFill="WHITE" />
+    <TextField fx:id="textFieldTotalLosses" alignment="CENTER" editable="false" layoutX="496.0" layoutY="451.0" opacity="0.56" prefHeight="25.0" prefWidth="130.0" />
+    <Label fx:id="labelBet" layoutX="51.0" layoutY="431.0" text="THIS BET" textFill="WHITE">
+      <font>
+        <Font size="14.0" fx:id="x1" />
+      </font>
+    </Label>
+    <TextField fx:id="textFieldBet" alignment="CENTER" layoutX="27.0" layoutY="451.0" prefHeight="25.0" prefWidth="113.0" />
+    <Label fx:id="labelYouWon" layoutX="268.0" layoutY="379.0" text="YOU WON" textAlignment="CENTER" textFill="#ff9708">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Label>
+    <TextField fx:id="textFieldTotalWins" alignment="CENTER" editable="false" layoutX="496.0" layoutY="401.0" opacity="0.56" prefWidth="130.0" />
+    <Label fx:id="labelTotalWins" layoutX="532.0" layoutY="382.0" text="Wins So Far" textFill="WHITE" />
+    <TextField fx:id="textFieldYouWon" alignment="CENTER" editable="false" layoutX="252.0" layoutY="410.0" opacity="0.56" prefHeight="65.0" prefWidth="145.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </TextField>
+    <Button fx:id="buttonSpin" layoutX="226.0" layoutY="550.0" mnemonicParsing="false" onAction="#buttonSpinListener" prefHeight="51.0" prefWidth="209.0" text="SPIN">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font></Button>
+    <Separator fx:id="separator01" layoutY="294.0" prefHeight="5.0" prefWidth="660.0" />
+    <Separator fx:id="separator03" layoutX="1.0" layoutY="535.0" prefHeight="5.0" prefWidth="648.0" />
+    <Button fx:id="buttonBet10" layoutX="157.0" layoutY="304.0" mnemonicParsing="false" onAction="#buttonBet10Listener" prefHeight="65.0" prefWidth="65.0" text="\$10" textAlignment="CENTER" textFill="#ebc909" textOverrun="CENTER_WORD_ELLIPSIS">
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font></Button>
+    <Button fx:id="buttonBet50" contentDisplay="CENTER" layoutX="227.0" layoutY="304.0" mnemonicParsing="false" onAction="#buttonBet50Listener" prefHeight="65.0" prefWidth="65.0" text="\$50" textAlignment="CENTER" textFill="#2a8619" textOverrun="CENTER_WORD_ELLIPSIS">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font></Button>
+    <Button fx:id="buttonBet100" layoutX="297.0" layoutY="304.0" mnemonicParsing="false" onAction="#buttonBet100Listener" prefHeight="65.0" prefWidth="65.0" text="\$100" textAlignment="CENTER" textFill="#1ebed3">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font></Button>
+    <Button fx:id="buttonBet500" layoutX="367.0" layoutY="304.0" mnemonicParsing="false" onAction="#buttonBet500Listener" prefHeight="65.0" prefWidth="65.0" text="\$500" textAlignment="CENTER" textFill="#360dbc">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font></Button>
+    <Button fx:id="buttonCashOut" layoutX="506.0" layoutY="304.0" mnemonicParsing="false" onAction="#buttonCashOutListener" prefHeight="65.0" prefWidth="65.0" text="CASH OUT" textFill="#2c7c42">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect></Button>
+    <Button fx:id="buttonMaxBet" layoutX="437.0" layoutY="304.0" mnemonicParsing="false" onAction="#buttonMaxListener" prefHeight="65.0" prefWidth="65.0" text="Max" textAlignment="CENTER" textFill="#d7119f">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font></Button>
+    <Button fx:id="buttonDeposit" layoutX="575.0" layoutY="304.0" mnemonicParsing="false" onAction="#buttonDepositListener" prefHeight="65.0" prefWidth="65.0" text="DEPOSIT" textFill="#e43f3f">
+         <effect>
+            <Reflection />
+         </effect></Button>
+    <Label fx:id="labelYourBalance" layoutX="283.0" layoutY="480.0" text="Current Balance" textFill="WHITE" />
+    <Label fx:id="labelDeposit" layoutX="60.0" layoutY="480.0" text="DEPOSIT" textFill="WHITE" />
+    <TextField fx:id="textFieldBalance" alignment="CENTER" disable="false" editable="false" layoutX="260.0" layoutY="498.0" opacity="0.56" prefHeight="25.0" prefWidth="139.0" />
+    <TextField fx:id="textFieldDeposit" alignment="CENTER" layoutX="27.0" layoutY="498.0" prefHeight="25.0" prefWidth="112.99990000000253" />
+      <Button fx:id="buttonQuit" layoutX="564.0" layoutY="566.0" mnemonicParsing="false" onAction="#keyQuitListener" text="QUIT" />
+      <Label fx:id="labelTotalBets" layoutX="529.0" layoutY="480.0" text="Beting So Far" textFill="WHITE" />
+      <Button fx:id="buttonBet2X" contentDisplay="CENTER" layoutX="18.0" layoutY="304.0" mnemonicParsing="false" onAction="#buttonBet2XListener" prefHeight="65.0" prefWidth="65.0" text="2X" textAlignment="CENTER" textFill="#dd0808" textOverrun="CENTER_WORD_ELLIPSIS">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </Button>
+      <Button fx:id="buttonBet5" layoutX="87.0" layoutY="304.0" mnemonicParsing="false" onAction="#buttonBet5Listener" prefHeight="65.0" prefWidth="65.0" text="\$5" textAlignment="CENTER" textFill="#eb8b05" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <TextField fx:id="textFieldTotalBets" alignment="CENTER" editable="false" layoutX="496.0" layoutY="498.0" opacity="0.56" prefHeight="25.0" prefWidth="130.0" />
+      <Button fx:id="buttonReset" layoutX="43.0" layoutY="566.0" mnemonicParsing="false" onAction="#keyResetListener" text="RESET" />
+    <Label fx:id="labelMain" alignment="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="35.0" prefWidth="608.0" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font name="Arial Black" size="20.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
